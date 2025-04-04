@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Iansui&family=Klee+One&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .container1 {
+        display: flex;
+      }
+
+      .container1 div {
+        margin: 5px;
+      }
+
+      .container2 {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 600px 600px;
+        grid-template-rows: 10px 800px;
+        gap: 20px;
+      }
+
+      #text {
+        border-width: 1px;
+        border-style: solid;
+      }
+
+      #txarea {
+        width: 100%;
+        height: 100%;
+      }
+
+      .box-top {
+        text-align: center;
+      }
+    </style>
+    <title>ワープロ検定練習</title>
+  </head>
+  <body>
+    <h1>ワープロ検定タイピング練習</h1>
+    <div class="container1">
+        <div>
+            <button id="help">使い方</button>
+        </div>
+        <div>
+        <label
+          >級の選択：
+          <select id="levelSelect">
+            <option>-</option>
+            <option>1</option>
+            <option>準1</option>
+            <option>2</option>
+            <option>準2</option>
+            <option>3</option>
+          </select></label
+        >
+      </div>
+      <div><button id="textChange">テキストチェンジ</button></div>
+      <div><button id="startButton">スタート</button></div>
+      <div id="timer"></div>
+      <div id="op"></div>
+    </div>
+    <div id="kekka"></div>
+    <div class="container2">
+      <div class="box-top">課題文</div>
+      <div class="box-top">タイプフィールド</div>
+      <div id="text" onCopy="alert('コピー禁止'); return false;" onContextmenu="return false;">＊級を選択するとテキストが表示されます</div>
+      <div>
+        <textarea id="txarea"></textarea>
+      </div>
+    </div>
+    <script src="word.js"></script>
+  </body>
+</html>
